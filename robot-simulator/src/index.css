@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.interactive-guide {
+  padding: 50px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.interactive-guide h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.interactive-guide p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.guide-controls button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.guide-controls button:hover {
+  background-color: #0056b3;
+}
+
+.guide-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
