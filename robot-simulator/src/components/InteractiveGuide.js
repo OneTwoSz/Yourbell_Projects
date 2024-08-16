@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 const steps = [
   "Welcome to the Robot Simulator! Let's get started.",
-  "Step 1: Use the 'Rotate Left' button to change the robot's direction counterclockwise.",
-  "Step 2: Use the 'Rotate Right' button to change the robot's direction clockwise.",
-  "Step 3: Use the 'Move Forward' button to move the robot one step in the direction it's facing.",
-  "Step 4: Watch the robot move around the grid as you control it!",
-  "You're all set! Try experimenting with different movements and rotations."
+  "Step 1: The robot can face one of four directions: North, East, South, or West. You can see its head pointing in the direction it's facing.",
+  "Step 2: Use the 'Rotate Left' button to rotate the robot counterclockwise. Notice how the robot's head changes direction.",
+  "Step 3: Use the 'Rotate Right' button to rotate the robot clockwise. Again, observe how the robot's head turns to indicate the new direction.",
+  "Step 4: Now, use the 'Move Forward' button. The robot will move one step in the direction its head is facing. For example, if the robot's head is facing East, it will move to the right.",
+  "Step 5: Experiment with different combinations of rotating and moving forward. You'll see that the robot always moves in the direction its head is pointing.",
+  "You're all set! Try navigating the robot around the grid using the controls."
 ];
 
 const InteractiveGuide = () => {
