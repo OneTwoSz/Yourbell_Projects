@@ -2,11 +2,10 @@
   display: grid;
   grid-template-columns: repeat(5, 60px);
   grid-template-rows: repeat(5, 60px);
-  gap: 5px;
-  margin: 20px auto;
+  gap: 0.5px; 
+  margin: 0 auto;
   border: 2px solid #000000;
-  background-color: #fff; /* Ensure visibility */
-  z-index: 10;
+  background-color: #fff; 
 }
 
 .cell {
@@ -26,8 +25,6 @@
   color: #fff;
   border-radius: 8px;
 }
-
-/* Add this to your existing CSS */
 
 .hero {
   height: 100vh;
@@ -67,6 +64,10 @@
 }
 
 #simulator {
-  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  padding: 5px; 
 }
-
