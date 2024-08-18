@@ -73,6 +73,14 @@ button:hover {
   background-color: #c94f1a;
 }
 
+.hero-text-box {
+  background-color: #edeae5; /* Light gray box */
+  padding: 15px 25px; /* Padding inside the box */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1.2rem;
+  color: #080808; /* Text color */
+  margin-bottom: 30px;
+}
 
 /* Grid */
 .grid {
@@ -82,7 +90,8 @@ button:hover {
   gap: 2px;
   border: 1px solid #e0e0e0; 
   background-color: #ffffff; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow for the grid */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
 }
 
 .cell {
@@ -210,7 +219,12 @@ button:hover {
   background-color: #ffffff;
   padding: 1px 0;
   color: #ffffff;
-  position: relative;
+  position: fixed; /* Make the header fixed at the top */
+  top: 0; /* Position it at the very top */
+  left: 0;
+  width: 100%; /* Make sure the header spans the full width of the screen */
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
 
 .header .container {
@@ -220,8 +234,12 @@ button:hover {
   position: relative;
 }
 
+body {
+  padding-top: 60px; /* Adjust this based on the header's height */
+}
+
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
 }
