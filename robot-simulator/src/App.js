@@ -1,9 +1,11 @@
 import React from 'react';
 import './styles/App.css';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import InteractiveGuide from './components/InteractiveGuide';
 import Grid from './components/Grid';
 import Controls from './components/Controls';
+import Footer from './components/Footer';
 import useRobot from './hooks/useRobot';
 
 const App = () => {
@@ -15,8 +17,11 @@ const App = () => {
 
   return (
     <div className="app">
+      <Header />
       <Hero onClick={scrollToSimulator} />
-      <InteractiveGuide />
+      <div id="guide">
+        <InteractiveGuide />
+      </div>
       <div id="simulator">
         <h1>Robot Simulator</h1>
         <Grid position={position} gridSize={5} />
@@ -26,6 +31,7 @@ const App = () => {
           rotateRight={rotateRight}
         />
       </div>
+      <Footer />
     </div>
   );
 };
