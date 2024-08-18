@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; 2024 Robot Simulator. All rights reserved.</p>
+        <p>I'm a quick learner, and if you give me some HTML and CSS, I'll sling them into stunning digital experiences.</p>
         <nav className="footer-nav">
           <ul>
             <li><a href="#simulator">Simulator</a></li>

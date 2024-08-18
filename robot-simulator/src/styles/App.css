@@ -1,20 +1,20 @@
 body {
-  background-color: #f7f7f7; /* Light gray background */
-  color: #333333; /* Dark gray text */
+  background-color: #f7f7f7;
+  color: #333333;
   font-family: 'Poppins';
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3 {
-  font-weight: 400; /* Lighter font weight for headings */
-  color: #333333; /* Consistent heading color */
+  font-weight: 400; 
+  color: #333333; 
 }
 
 p {
   font-size: 1rem;
   line-height: 1.5;
-  color: #555555; /* Slightly lighter gray for paragraph text */
+  color: #555555; 
 }
 
 button {
@@ -41,11 +41,11 @@ button:hover {
   align-items: center;
   text-align: center;
   background-image: url('../assets/hero.jpg'); 
-  background-size: cover; /* Cover the whole hero section */
-  background-position: center; /* Center the image */
-  color: #ffffff; /* Make text white for contrast */
+  background-size: cover; 
+  background-position: center; 
+  color: #ffffff;
   padding: 0 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
@@ -74,11 +74,11 @@ button:hover {
 }
 
 .hero-text-box {
-  background-color: #edeae5; /* Light gray box */
-  padding: 15px 25px; /* Padding inside the box */
-  border-radius: 8px; /* Rounded corners */
+  background-color: #edeae5; 
+  padding: 15px 25px; 
+  border-radius: 8px; 
   font-size: 1.2rem;
-  color: #080808; /* Text color */
+  color: #080808; 
   margin-bottom: 30px;
 }
 
@@ -219,12 +219,12 @@ button:hover {
   background-color: #ffffff;
   padding: 1px 0;
   color: #ffffff;
-  position: fixed; /* Make the header fixed at the top */
-  top: 0; /* Position it at the very top */
+  position: fixed; 
+  top: 0; 
   left: 0;
-  width: 100%; /* Make sure the header spans the full width of the screen */
-  z-index: 1000; /* Ensure it stays above other elements */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  width: 100%; 
+  z-index: 1000; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .header .container {
@@ -235,7 +235,7 @@ button:hover {
 }
 
 body {
-  padding-top: 60px; /* Adjust this based on the header's height */
+  padding-top: 60px; 
 }
 
 .logo {
@@ -254,7 +254,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  z-index: 1001; /* Ensures the hamburger is above the overlay */
+  z-index: 1001; 
 }
 
 .hamburger .bar {

@@ -7,25 +7,27 @@ const useRobot = () => {
   const [position, setPosition] = useState({ x: 0, y: 0, dir: 'N' });
 
   const moveForward = () => {
-    setPosition(prev => {
-      let { x, y, dir } = prev;
+    setPosition(({ x, y, dir }) => {
+      const newPosition = { x, y, dir };
+
       switch (dir) {
         case 'W':
-          y = Math.max(0, y - 1);
+          newPosition.y = Math.max(0, y - 1);
           break;
         case 'S':
-          x = Math.min(GRID_SIZE - 1, x + 1);
+          newPosition.x = Math.min(GRID_SIZE - 1, x + 1);
           break;
         case 'E':
-          y = Math.min(GRID_SIZE - 1, y + 1);
+          newPosition.y = Math.min(GRID_SIZE - 1, y + 1);
           break;
         case 'N':
-          x = Math.max(0, x - 1);
+          newPosition.x = Math.max(0, x - 1);
           break;
         default:
           break;
       }
-      return { x, y, dir };
+
+      return newPosition;
     });
   };
 

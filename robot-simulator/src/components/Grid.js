@@ -1,41 +1,34 @@
 import React from 'react';
-import { ReactComponent as RobotIcon } from '../assets/robot.svg'; 
+import { ReactComponent as RobotIcon } from '../assets/robot.svg';
 
 const Grid = ({ position, gridSize }) => {
   const getRotation = (direction) => {
-    switch (direction) {
-      case 'N':
-        return 'rotate(0deg)';
-      case 'E':
-        return 'rotate(90deg)';
-      case 'S':
-        return 'rotate(180deg)';
-      case 'W':
-        return 'rotate(270deg)';
-      default:
-        return 'rotate(0deg)';
-    }
+    const rotations = {
+      N: 'rotate(0deg)',
+      E: 'rotate(90deg)',
+      S: 'rotate(180deg)',
+      W: 'rotate(270deg)',
+    };
+    return rotations[direction] || 'rotate(0deg)';
   };
 
   return (
     <div className="grid">
-      {[...Array(gridSize)].map((_, rowIndex) => (
+      {Array.from({ length: gridSize }).map((_, rowIndex) => (
         <div key={rowIndex} className="row">
-          {[...Array(gridSize)].map((_, colIndex) => (
-            <div
-              key={colIndex}
-              className={`cell ${
-                position.x === colIndex && position.y === rowIndex ? 'robot' : ''
-              }`}
-            >
-              {position.x === colIndex && position.y === rowIndex && (
-                <RobotIcon
-                  style={{ transform: getRotation(position.dir) }}
-                  className="robot-svg"
-                />
-              )}
-            </div>
-          ))}
+          {Array.from({ length: gridSize }).map((_, colIndex) => {
+            const isRobotPosition = position.x === colIndex && position.y === rowIndex;
+            return (
+              <div key={colIndex} className={`cell ${isRobotPosition ? 'robot' : ''}`}>
+                {isRobotPosition && (
+                  <RobotIcon
+                    style={{ transform: getRotation(position.dir) }}
+                    className="robot-svg"
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
       ))}
     </div>

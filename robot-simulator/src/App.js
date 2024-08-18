@@ -11,26 +11,28 @@ import useRobot from './hooks/useRobot';
 const App = () => {
   const { position, moveForward, rotateLeft, rotateRight } = useRobot();
 
-  const scrollToSimulator = () => {
-    document.getElementById('simulator').scrollIntoView({ behavior: 'smooth' });
+  const scrollToElement = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div className="app">
       <Header />
-      <Hero onClick={scrollToSimulator} />
-      <div id="guide">
-        <InteractiveGuide />
-      </div>
-      <div id="simulator">
-        <h1>Robot Simulator</h1>
-        <Grid position={position} gridSize={5} />
-        <Controls
-          moveForward={moveForward}
-          rotateLeft={rotateLeft}
-          rotateRight={rotateRight}
-        />
-      </div>
+      <Hero onClick={() => scrollToElement('simulator')} />
+      <main>
+        <section id="guide">
+          <InteractiveGuide />
+        </section>
+        <section id="simulator">
+          <h1>Robot Simulator</h1>
+          <Grid position={position} gridSize={5} />
+          <Controls
+            moveForward={moveForward}
+            rotateLeft={rotateLeft}
+            rotateRight={rotateRight}
+          />
+        </section>
+      </main>
       <Footer />
     </div>
   );

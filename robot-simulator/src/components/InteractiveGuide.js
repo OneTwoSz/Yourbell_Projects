@@ -13,17 +13,8 @@ const steps = [
 const InteractiveGuide = () => {
   const [currentStep, setCurrentStep] = useState(0);
 
-  const nextStep = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
-
-  const prevStep = () => {
-    if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
+  const nextStep = () => setCurrentStep((prevStep) => Math.min(prevStep + 1, steps.length - 1));
+  const prevStep = () => setCurrentStep((prevStep) => Math.max(prevStep - 1, 0));
 
   return (
     <div className="interactive-guide">
